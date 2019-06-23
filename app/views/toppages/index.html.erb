@@ -1,7 +1,11 @@
 <div class="jumbotron jumbotron-fluid mb-0">
   <div class="text-center">
-    <%= link_to "Signup", new_user_path, class: "btn btn-main btn-lg"%>
-    <a class="btn btn-main btn-lg" href="#" role="button">Login</a>
+    <% if logged_in? %>
+      <h2>ようこそ！<%= current_user.name %></h2>
+    <% else %>
+      <%= link_to "Signup", new_user_path, class: "btn btn-main btn-lg" %>
+      <%= link_to "Login", login_path, class: "btn btn-main btn-lg" %>
+    <% end %>
     <h4 class="mt-4">自分だけのオリジナル単語帳を作成しよう！</h4>
   </div>  
 </div>

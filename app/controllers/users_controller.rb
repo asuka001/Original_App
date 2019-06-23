@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
+  before_action :require_user_logged_in, only: [:show, :edit, :update, :destroy]
+  
   def show
     @user = User.find(params[:id])
   end
   
   def create
-    @user = User.new(params_user)
+    @user = User.new(user_params)
     
     if @user.save
       flash[:success] = "登録が完了しました"
@@ -16,6 +18,7 @@ class UsersController < ApplicationController
   end
   
   def edit
+    @user = User.find(params[:id])
   end
   
   def new
@@ -23,14 +26,24 @@ class UsersController < ApplicationController
   end
   
   def update
+    @user = User.find(params[:id])
+    
+    if @user
+    end
   end
   
   def destroy
+    @user = User.find(params[:id])
+    
+    if @user.destroy
+      flash[:success] = "ユーザを削除しました"
+      render :root
+    end
   end
   
   private
   
-  def params_user
+  def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
