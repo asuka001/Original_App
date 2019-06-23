@@ -22,7 +22,7 @@
    color: white;
  }
  
- .logo {
+ .nav-logo {
   width: 50px;
   height: 50%;
   margin-left: auto;
@@ -39,4 +39,20 @@
 
 .jumbotron h4 {
   color: white;
+}
+
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+.table > thead > tr > td {
+  vertical-align: middle;
+  border: none;
+  white-space: nowrap; 
+}
+
+.book-logo {
+  height: 70%;
+}
+
+.submit-bottum {
+  text-align : center ; 
 }
