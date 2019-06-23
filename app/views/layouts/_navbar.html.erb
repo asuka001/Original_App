@@ -1,16 +1,15 @@
-<header class="mb-4">
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    #ここに画像のアイコンを挿入したい
-    <a class="navbar-brand" href="/">Olive</a>
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <%= link_to image_tag("f_business_421.png", class:"logo"), "/" %>
+    <a class="navbar-brand h1 ml-2 mt-1" href="/">Olive</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
     <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
-        <li class="nav-item"><a href="#" class="nav-link">signup</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">login</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">signup</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">login</a></li>
       </ul>
     </div>
   </nav>

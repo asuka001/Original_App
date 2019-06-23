@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+ .navbar {
+   background-color: navy;
+ }
+ 
+ .btn-main {
+   background-color: navy;
+   color: white;
+ }
+ 
+ .logo {
+  width: 50px;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.jumbotron {
+  background-image: url("main_image_t.jpg");
+  background-size: cover;
+  height: 750px;
+  background-position: center center;
+}
+
+
+.jumbotron h4 {
+  color: white;
+}
