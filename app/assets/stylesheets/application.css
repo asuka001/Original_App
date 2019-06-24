@@ -14,13 +14,16 @@
  *= require_self
  */
  .navbar {
-   background-color: navy;
+   background-color: royalblue;
  }
  
- .btn-main {
-   background-color: navy;
-   color: white;
+ .btn-toppage {
+   padding: 10px 20px;
+   margin-right: 25px;
+   margin-left: 25px;
  }
+ 
+ 
  
  .nav-logo {
   width: 50px;
@@ -30,12 +33,12 @@
  }
 
 .jumbotron {
-  background-image: url("main_image_t.jpg");
+  background-image: url("abc-3523453_1920.jpg");
   background-size: cover;
-  height: 750px;
+  height: 600px;
   background-position: center center;
+  padding-top: 400px;
 }
-
 
 .jumbotron h4 {
   color: white;
@@ -55,4 +58,12 @@
 
 .submit-bottum {
   text-align : center ; 
+}
+
+.bar {
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: royalblue;
+  text-align: center;
 }

@@ -3,12 +3,20 @@
     <% if logged_in? %>
       <h2>ようこそ！<%= current_user.name %></h2>
     <% else %>
-      <%= link_to "Signup", new_user_path, class: "btn btn-main btn-lg" %>
-      <%= link_to "Login", login_path, class: "btn btn-main btn-lg" %>
+      <%= link_to "Signup", new_user_path, class: "btn btn-primary btn-toppage btn-lg" %>
+      <%= link_to "Login", login_path, class: "btn btn-primary btn-toppage btn-lg" %>
     <% end %>
     <h4 class="mt-4">自分だけのオリジナル単語帳を作成しよう！</h4>
   </div>  
 </div>
-<nav class="navbar navbar-expand-sm navbar-dark text-center">
-  <h3 class="text-center">How To</h3>
-</nav>
+<h2 class="bar">How To</h2>
+<div class="howto-container">
+  <div class="left">
+    <div class="box-left"></div>
+    <div class="box-center"></div>
+    <div class="box-right"></div>
+  </div>
+  <div class="right">
+    
+  </div>
+</div>
