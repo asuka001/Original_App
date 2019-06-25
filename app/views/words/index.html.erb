@@ -1,0 +1,14 @@
+<div>
+  <%= link_to "create", new_word_path, class: "btn btn-success btn-lg ml-2 mt-2" %>
+</div>
+
+<div>
+  <% @words.each do |word| %>
+    <ul>
+      <li><a href="<%= word_path(word.id) %>"><%= word.word %></a></li>
+      <p><%= word.mean %></p>
+      <%= link_to "edit", edit_word_path(word.id), class: "btn btn-primary btn-lg mt-2" %>
+      <%= link_to "delete", word_path(word.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-lg mt-2" %>
+    </ul>
+  <% end %>
+</div>

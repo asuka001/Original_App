@@ -10,8 +10,8 @@
         <td class="text-left"><h4><%= @user.email %></h4></td>
       </tr>
       <tr>
-        <td><%= link_to image_tag("love-book-128.png", class:"book-logo"), "#" %></td>
-        <td class="text-left"><a href="#"><h3>your original book!</h3></a></td>
+        <td><%= link_to image_tag("love-book-128.png", class:"book-logo"), words_path(@user) %></td>
+        <td class="text-left"><%= link_to "your original book!", words_path(@user), class: "h3"  %></td>
       </tr>
     </table>
   </div>
