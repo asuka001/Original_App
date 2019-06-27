@@ -1,7 +1,7 @@
 <div class="jumbotron jumbotron-fluid mb-0">
   <div class="text-center">
     <% if logged_in? %>
-      <h2>ようこそ！<%= current_user.name %></h2>
+      <h1>ようこそ！<%= current_user.name %></h1>
     <% else %>
       <%= link_to "Signup", new_user_path, class: "btn btn-primary btn-toppage btn-lg" %>
       <%= link_to "Login", login_path, class: "btn btn-primary btn-toppage btn-lg" %>

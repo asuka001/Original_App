@@ -49,7 +49,7 @@ class WordsController < ApplicationController
   private
   
   def word_paramas
-    params.require(:word).permit(:word, :mean, :example)
+    params.require(:word).permit(:word, :mean, :example, :category_id)
   end
   
   def correct_user
