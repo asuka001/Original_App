@@ -14,15 +14,18 @@
         <td class="text-left"><h4><%= @word.example %></h4></td>
       </tr>
       <tr>
-        <td class="strong"><h3>Category:</h3></td>
-        <td class="text-left"><h4><%= @word.category.name %></h4></td>
+          <td class="strong"><h3>Category:</h3></td>
+          <td class="text-left"><h4><%= @word.category.name %></h4></td>
       </tr>
     </table>
-  </div>
-  <div class="mt-4 ml-4">
+    <%= link_to words_path do %>
+      <i class="fas fa-reply ml-2 mr-2" ></i>Back
+    <% end %>
+    <div class="mt-4 ml-4">
     <% if current_user?(@word.user) %>
       <%= link_to "Edit", edit_word_path(@word.id), class: "btn btn-primary btn-lg mr-4" %>
       <%= link_to "Delete", word_path(@word.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-lg" %>
     <% end %>
+    </div>
   </div>
 </div>

@@ -1,0 +1,30 @@
+<div class="view-container">
+  <% @words.each do |word| %>
+    <div class="view-box">
+      <div class="view-box-top">
+        <div class="view-box-left">
+          <img src="<%= gravatar_url(word.user, { size:70 }) %>" alt="">
+          <p><%= word.user.name %></p>
+        </div>
+        <div class="view-box-right">
+          <div class="view-box-right-top">
+            <div class="view-box-right-l">
+              <h4>word</h4>
+              <p><%= word.word %></p>
+            </div>
+            <div class="view-box-right-r">
+              <h4>mean</h4>
+              <p><%= word.mean %></p>
+            </div>
+          </div>
+          <div class="view-box-right-bottom">
+            <p># <%= word.category.name %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div>
+    <%= paginate @words %>
+  </div>
+</div>
