@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   
   def index
-    @words = current_user.words
+    @words = current_user.words.page(params[:page]).per(25)
   end
 
   def create
