@@ -1,5 +1,14 @@
 Category.create([
   {
+    name:"noun"
+  },
+  {
+    name:"verb"
+  },
+  {
+    name:"adjective"
+  },
+  {
     name:"business"
   },
   {
@@ -12,7 +21,7 @@ Category.create([
     name:"feeling"
   },
   {
-    name:"Sightseeing"
+    name:"sightseeing"
   },
   {
     name:"animal"
