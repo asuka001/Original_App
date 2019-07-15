@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @likes = @user.likes.page(params[:page]).per(25)
   end
   
   def create

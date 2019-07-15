@@ -22,12 +22,16 @@
   <body>
     <%= render "layouts/navbar" %>
     
-    <div class="wrapper">
-      <div class="messages">
-        <%= render "layouts/flash_messages" %>
+    <div class="main">
+      <div class="wrapper">
+        <div class="messages">
+          <%= render "layouts/flash_messages" %>
+        </div>
       </div>
+      <%= yield %>
     </div>
     
-    <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
+  
 </html>

@@ -8,14 +8,12 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :likes, through: :favorites, source: :word
   
-  def like(other_word)
-    unless self.words.include?(other_word)
-      self.favorites.find_or_create_by(word_id: other_word.id)
-    end
+  def like(word_id)
+    self.favorites.find_or_create_by(word_id: word_id)
   end
   
-  def unlike(other_word)
-    favorite = self.favorites.find_by(word_id: other_word.id)
+  def unlike(word_id)
+    favorite = self.favorites.find_by(word_id: word_id)
     favorite.destroy if favorite
   end
   

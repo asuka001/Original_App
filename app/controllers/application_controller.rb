@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  add_flash_types :success, :info, :warning, :danger
   
   include SessionsHelper
   
@@ -10,6 +11,5 @@ class ApplicationController < ActionController::Base
       redirect_to root_url
     end
   end
-  
   
 end

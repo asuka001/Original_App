@@ -6,6 +6,7 @@ class Word < ApplicationRecord
   validates :mean, presence: true, length: { maximum:255 }
   validates :category, presence: true
   
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :like_users, through: :favorites, source: :user
+  
 end

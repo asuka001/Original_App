@@ -1,0 +1,17 @@
+<% if logged_in? %>
+  <% if current_user.like?(word) %>
+    <%= link_to favorite_path(word.id), method: :delete, remote: true, class: "star-icon" do %>
+      <%= image_tag("star-on.png", class: "star") %>
+    <%end%>
+    <span class="likes_count">
+      <%= word.likes_count %>
+    </span>
+  <% else %>
+    <%= link_to favorites_path(word_id: word.id), method: :post, remote: true, class: "star-icon" do  %>
+      <%= image_tag("star-off.png", class: "star") %>
+    <% end %>
+    <span class="likes_count">
+      <%= word.likes_count %>
+    </span>
+  <% end %>
+<% end %>
