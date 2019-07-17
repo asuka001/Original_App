@@ -1,11 +1,11 @@
 <header class="sticky-top">
   <nav class="navbar navbar-expand-sm navbar-dark">
     <%= link_to image_tag("f_business_421.png", class:"nav-logo"), "/" %>
-    <a class="navbar-brand h1 ml-2 mt-1" href="/">Olive</a>
+    <%= link_to "Olive", root_path, class: "navbar-brand h1 ml-2 mt-1" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarContent">
+    <div class="collapse navbar-collapse navbar-nav-top" id="navbarContent">
       <ul class="navbar-nav mr-auto"></ul>
       <ul class="navbar-nav">
         <% if logged_in? %>
