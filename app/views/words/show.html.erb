@@ -1,30 +1,38 @@
 <div class="view-container">
   <table class="table text-center">
     <tr>
-      <td class="column"><h3>Word:</h3></td>
-      <td class="text-left"><h4><%= @word.word %></h4></td>
-    </tr>
-    <tr>
-      <td class="column"><h3>Mean:</h3></td>
-      <td class="text-left"><h4><%= @word.mean %></h4></td>
-    </tr>
-    <tr>
-      <td class="column"><h3>Example:</h3></td>
-      <td class="text-left"><h4><%= @word.example %></h4></td>
-    </tr>
-    <tr>
-        <td class="column"><h3>Category:</h3></td>
-        <td class="text-left"><h4><%= @word.category.name %></h4></td>
+      <td class="column"><img src="<%= gravatar_url(@user, { size:100 }) %>" alt="" class="user-img" ></td>
+      <td class="text-left username"><p><%= @user.name %></p></td>
     </tr>
   </table>
-  <div id="likes_buttons_<%= @word.id %>" class="ml-3">
-   <%= render partial: 'favorites/favorite_botton', locals: { word: @word } %>
-  </div>
-  <div class="edit_botton">
-  <% if current_user?(@word.user) %>
-    <%= link_to "Edit", edit_word_path(@word.id), class: "btn btn-primary btn-lg mr-4" %>
-    <%= link_to "Delete", word_path(@word.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-lg" %>
-  <% end %>
+  <div class="word-main">
+    <table class="table text-center">
+      <tr>
+        <td class="column"><h3>Word:</h3></td>
+        <td class="text-left"><p><%= @word.word %></p></td>
+      </tr>
+      <tr>
+        <td class="column"><h3>Mean:</h3></td>
+        <td class="text-left"><p><%= @word.mean %></p></td>
+      </tr>
+      <tr>
+        <td class="column"><h3>Example:</h3></td>
+        <td class="text-left"><p><%= @word.example %></p></td>
+      </tr>
+      <tr>
+          <td class="column"><h3>Category:</h3></td>
+          <td class="text-left"><p><%= @word.category.name %></p></td>
+      </tr>
+    </table>
+    <div id="likes_buttons_<%= @word.id %>" class="ml-3">
+     <%= render partial: 'favorites/favorite_botton', locals: { word: @word } %>
+    </div>
+    <div class="edit_botton">
+    <% if current_user?(@word.user) %>
+      <%= link_to "Edit", edit_word_path(@word.id), class: "btn btn-primary btn-lg mr-4" %>
+      <%= link_to "Delete", word_path(@word.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-lg" %>
+    <% end %>
+    </div> 
   </div>
   <%= link_to view_path, class: "back_link" do %>
     <i class="fas fa-reply reply-icon" ></i>To View

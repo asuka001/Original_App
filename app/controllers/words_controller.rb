@@ -27,6 +27,7 @@ class WordsController < ApplicationController
 
   def show
     @word = Word.find(params[:id])
+    @user = @word.user
   end
 
   def update

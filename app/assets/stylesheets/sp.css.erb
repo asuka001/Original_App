@@ -1,0 +1,423 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+ header {
+   height: 70px;
+   background-color: #ff7675;
+ }
+ 
+ .wrapper {
+   position: absolute;
+   top: 70px;
+   z-index: 1;
+   width: 100%;
+ }
+ 
+ .messages {
+   width: 500px;
+   margin: 10px auto;
+ }
+ 
+ .btn-toppage {
+   padding: 10px 20px;
+   margin-right: 25px;
+   margin-left: 25px;
+ }
+ 
+.navbar {
+  background-color: #ff7675;
+}
+ 
+.nav-logo {
+  background-image: url("<%= asset_path('f_business_421.png') %>");
+  background-size: cover;
+  width: 70px;
+  height: 50px;
+}
+
+.nav-logo a {
+  display: block;
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.back-link {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.reply-icon {
+  margin-right: 10px;
+}
+
+.main {
+  background-color: #F8F8F8;
+  min-height: 575px;
+}
+
+.jumbotron {
+  background-image: url("<%= asset_path('abc-3523453_1920.jpg') %>");
+  background-size: cover;
+  height: 600px;
+  background-position: center center;
+  padding-top: 400px;
+  color: white;
+}
+
+.jumbotron h4 {
+  color: white;
+  line-height: 2em;
+  font-family: Lato;
+}
+
+.table > tbody > tr > td,
+.table > tfoot > tr > td,
+.table > thead > tr > td {
+  vertical-align: middle;
+  border: none;
+  white-space: nowrap; 
+}
+
+.column {
+  width: 200px;
+  text-align: left;
+}
+
+.book-logo {
+  height: 70%;
+}
+
+.submit-bottum {
+  text-align : center ; 
+}
+
+.bar {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  color: #fff;
+  background-color: #ff7675;
+  text-align: center;
+}
+
+.howto-container {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+}
+
+.howto-container-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1.5;
+  justify-content: space-around;
+}
+
+.howto-container-left h3 {
+  font-family: "YuGothic";
+  margin-bottom: 20px
+}
+
+.howto-container-left p {
+  word-wrap: break-word;
+  line-height: 1.3em;
+}
+
+.howto-container-right {
+  display: none;
+}
+
+.howto-container-left-lbox {
+  width: 100%;
+  height: 100px;
+  border-color: black;
+  margin: 0 10px;
+}
+
+.howto-container-left-cbox {
+  width: 100%;
+  height: 100px;
+  border-color: black;
+  margin: 0 10px;
+}
+
+.howto-container-left-rbox {
+  width: 100%;
+  height: 100px;
+  margin: 0 10px;
+}
+
+
+.view-container {
+  padding-bottom: 30px;
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 400px;
+}
+
+
+.view-box {
+  background-color: white;
+  border: 1px solid black;
+  margin: 20px auto;
+  padding: 10px 10px 10px 5px;
+  flex-direction: column;
+} 
+
+.view-box-top {
+  display: flex;
+  align-items: center;
+}
+
+.view-box p {
+  margin: 0;
+}
+
+.user_icon {
+  width: 80px;
+	height: 80px;
+	border-radius: 40px;
+}
+
+.view-box-left {
+  width: 100px;
+  text-align: center;
+}
+
+.view-box-right {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  margin-left: 20px;
+}
+
+.view-box-right p {
+  font-size: 25px;
+}
+
+.view-box-right-top {
+  display: flex;
+  
+}
+
+.view-box-right h4 {
+  display: inline;
+  padding: 0 5px;
+  background-color: #A2CD5C;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.view-box-right-l {
+  flex: 1;
+}
+
+.view-box-right-l p {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.view-box-right-r {
+  flex: 1;
+}
+
+.view-box-right-r p {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.view-box-right-bottom {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.category_like {
+  text-align: right;
+}
+
+.edit-botton_top {
+  display: inline;
+}
+
+.edit-botton_top a {
+  font-size: 10px;
+}
+
+.edit-btn {
+  margin: 0 5px 0 10px;
+}
+
+.category {
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+.information {
+  display: flex;
+  margin-top: 20px;
+}
+
+.username {
+  width: 520px;
+  text-align: left;
+  font-size: 30px;
+  align-self: center;
+}
+
+.username p {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.create-btn {
+  width: 200px;
+  text-align: right;
+}
+
+.create-btn a {
+  font-size: 15px;
+}
+
+.edit_botton {
+  text-align: center;
+}
+
+.back_link {
+  margin-right: 20px;
+}
+
+.user_main {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+
+
+.user_main_left {
+  flex: 2;
+}
+
+.user-img {
+  width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+.word-main {
+  border: 2px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.word-main {
+  font-size: 25px;
+  max-width: 375px;
+}
+
+.user_main_left a {
+  color: blue;
+}
+
+.user_main_right {
+  flex: 1;
+  padding-top: 30px;
+}
+
+.like_button {
+  display: inline;
+}
+
+.like_button:hover {
+  text-decoration: none;
+}
+
+.star-icon:hover {
+  text-decoration: none;
+}
+
+.star {
+  padding-right: 0px;
+  margin-bottom: 7px;
+  width: 20px;
+  height: 20px;
+}
+
+.likes_count {
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.favorite-title {
+  font-weight: normal;
+  display: inline-block;
+  background-color: #DDDDDD;
+  border: 2px solid #666666;
+  padding: 15px;
+  color: white;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+
+.favorite_items {
+  background-color: white;
+  border: 2px solid #808080;
+  padding: 20px;
+  border-radius: 7px;
+  margin-top: -3px;
+}
+
+footer {
+  background-color: #353b48;
+}
+
+footer ul {
+  margin-bottom: 0;
+}
+
+footer h4 {
+  padding-top: 10px;
+  color: white;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+footer a {
+  color: #848690;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+footer ul li {
+  list-style-type: none;
+  padding-bottom: 10px;
+}

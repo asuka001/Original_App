@@ -4,45 +4,43 @@
       <p><%= current_user.name %>'s word book !</p>
     </div>
     <div class="create-btn">
-      <%= link_to "create new word", new_word_path, class: "btn btn-success btn-lg" %>
+      <%= link_to "create", new_word_path, class: "btn btn-success btn-lg" %>
     </div>
   </div>
   <div>
-    <div class="container">
-    <% @words.each do |word| %>
-      <div class="view-box">
-        <div class="view-box-top">
-          <div class="view-box-right">
-            <div class="view-box-right-top">
-              <div class="view-box-right-l">
-                <h4>word</h4>
-                <p><%= link_to word.word, word_path(word.id) %></p>
-              </div>
-              <div class="view-box-right-r">
-                <h4>mean</h4>
-                <p><%= word.mean %></p>
-              </div>
+  <% @words.each do |word| %>
+    <div class="view-box">
+      <div class="view-box-top">
+        <div class="view-box-right">
+          <div class="view-box-right-top">
+            <div class="view-box-right-l">
+              <h4>word</h4>
+              <p><%= link_to word.word, word_path(word.id) %></p>
             </div>
-            <div class="view-box-right-bottom">
-              <div class="category_like">
-                <span class="category"># <%= word.category.name %></span>
-                <div id="likes_buttons_<%= word.id %>" class="like_button">
-                 <%= render partial: 'favorites/favorite_botton', locals: { word: word } %>
-                </div>
-              </div>  
-              <div class="edit-botton_top">
-                <% if current_user?(word.user) %>
-                  <%= link_to "edit", edit_word_path(word.id), class: "btn btn-primary btn-sm edit-btn" %>
-                  <%= link_to "delete", word_path(word.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-sm" %>
-                <% end %>
+            <div class="view-box-right-r">
+              <h4>mean</h4>
+              <p><%= word.mean %></p>
+            </div>
+          </div>
+          <div class="view-box-right-bottom">
+            <div class="category_like">
+              <span class="category"># <%= word.category.name %></span>
+              <div id="likes_buttons_<%= word.id %>" class="like_button">
+               <%= render partial: 'favorites/favorite_botton', locals: { word: word } %>
               </div>
+            </div>  
+            <div class="edit-botton_top">
+              <% if current_user?(word.user) %>
+                <%= link_to "edit", edit_word_path(word.id), class: "btn btn-primary btn-sm edit-btn" %>
+                <%= link_to "delete", word_path(word.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "btn btn-danger btn-sm" %>
+              <% end %>
             </div>
           </div>
         </div>
       </div>
-    <% end %>
-    <div>
-      <%= paginate @words %>
-    </div>  
+    </div>
+  <% end %>
+  <div>
+    <%= paginate @words %>
   </div>
 </div>

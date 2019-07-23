@@ -10,7 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
  header {
@@ -40,12 +39,22 @@
    background-color: #ff7675;
  }
  
- .nav-logo {
-  width: 50px;
-  height: 50%;
+.nav-logo {
+  background-image: url("<%= asset_path('f_business_421.png') %>");
+  background-size: cover;
+  width: 70px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
- }
+}
+ 
+.nav-logo a {
+  display: block;
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
 
 .back-link {
   margin-right: 20px;
@@ -162,24 +171,12 @@
 }
 
 
-@media (min-width: 576px) {
-  .view-container {
-    padding-bottom: 30px;
-    margin: 0 auto;
-    padding-top: 20px;
-    max-width: 520px;
-    min-height: 300px;
-  }
-}
-
-@media (min-width: 768px) {
-  .view-container {
-    padding-bottom: 30px;
-    margin: 0 auto;
-    padding-top: 20px;
-    max-width: 720px;
-    min-height: 610px;
-  }
+.view-container {
+  padding-bottom: 30px;
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 720px;
+  min-height: 700px;
 }
 
 .view-box {
@@ -255,6 +252,7 @@
 
 .view-box-right-bottom {
   display: flex;
+  justify-content: flex-end;
   text-align: right;
   padding-right: 20px;
   padding-top: 10px;
@@ -264,14 +262,12 @@
   justify-content: center;
 }
 
-.edit-botton_top {
-  flex: 1;
-  display: inline;
+.category_like {
+  text-align: right;
 }
 
-.category_like {
-  flex: 3;
-  text-align: right;
+.edit-botton_top {
+  display: inline;
 }
 
 .edit-btn {
@@ -314,16 +310,30 @@
 
 .user_main {
   display: flex;
+  margin-bottom: 60px;
 }
+
+
 
 .user_main_left {
   flex: 2;
 }
 
-.user_main_left img {
+.user-img {
   width: 100px;
 	height: 100px;
 	border-radius: 50px;
+}
+
+.word-main {
+  border: 2px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.word-main {
+  font-size: 25px;
 }
 
 .user_main_left a {
