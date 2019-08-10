@@ -92,12 +92,13 @@
 }
 
 .column {
-  width: 200px;
+  width: 140px;
   text-align: left;
 }
 
 .book-logo {
-  height: 70%;
+  margin-left: 20px;
+  width: 60px;
 }
 
 .submit-bottum {
@@ -165,10 +166,10 @@
 .view-container {
   padding-bottom: 30px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px 7px 15px 7px;
   max-width: 400px;
+  min-height: 100vh;
 }
-
 
 .view-box {
   background-color: white;
@@ -245,6 +246,7 @@
   display: flex;
   justify-content: flex-end;
   padding-top: 10px;
+  flex-direction: column;
 }
 
 .pagination {
@@ -256,6 +258,7 @@
 }
 
 .edit-botton_top {
+  text-align: right;
   display: inline;
 }
 
@@ -274,7 +277,7 @@
 
 .information {
   display: flex;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .username {
@@ -300,24 +303,28 @@
 
 .edit_botton {
   text-align: center;
+  margin-top: 20px;
 }
 
 .back_link {
   margin-right: 20px;
 }
 
-.user_main {
+.user_box {
   display: flex;
+  align-items: center;
   margin-bottom: 60px;
 }
 
-
-
-.user_main_left {
-  flex: 2;
+.user_box_name {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
 }
 
+
 .user-img {
+  margin-left: 20px;
   width: 100px;
 	height: 100px;
 	border-radius: 50px;
@@ -328,12 +335,11 @@
   background-color: white;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-.word-main {
   font-size: 25px;
   max-width: 375px;
 }
+
+
 
 .user_main_left a {
   color: blue;
@@ -342,6 +348,8 @@
 .user_main_right {
   flex: 1;
   padding-top: 30px;
+  padding-right: 20px;
+  text-align: right;
 }
 
 .like_button {
@@ -358,15 +366,16 @@
 
 .star {
   padding-right: 0px;
-  margin-bottom: 7px;
-  width: 20px;
-  height: 20px;
+  margin-bottom: 3px;
+  width: 25px;
+  height: 25px;
 }
 
 .likes_count {
-  font-size: 15px;
+  font-size: 20px;
   padding-left: 5px;
 }
+
 
 .favorite-title {
   font-weight: normal;
@@ -377,6 +386,7 @@
   color: white;
   margin-bottom: 0px;
   border-radius: 5px;
+  font-size: 25px;
 }
 
 .favorite_items {
@@ -420,4 +430,39 @@ footer a:hover {
 footer ul li {
   list-style-type: none;
   padding-bottom: 10px;
+}
+
+.word-main-table {
+  table-layout:fixed;
+  width:100%;
+  word-break: break-all;
+}
+
+.user_info {
+  margin-bottom: 40px;
+}
+
+.user_email {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.user_email h3 {
+  flex: 1;
+  align-self: center;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.user_email p {
+  flex: 2.3;
+  font-size: 25px;
+  align-self: center;
+  margin: 0;
+}
+
+.mybook_link {
+  padding-left: 40px;
+  font-size: 25px;
+  text-decoration: none;
 }

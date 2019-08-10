@@ -1,19 +1,23 @@
 <div class="view-container">
-  <div class="user_main">
-    <table class="table user_main_left">
-      <tr>
-        <td><img src="<%= gravatar_url(@user, { size:100 }) %>" alt="" class="user-img" ></td>
-        <td class="text-left"><h4><%= @user.name %></h4></td>  
-      </tr>
-      <tr>
-        <td class="strong"><h3>email:</h3></td>
-        <td class="text-left"><h4><%= @user.email %></h4></td>
-      </tr>
-      <tr>
-        <td><%= link_to image_tag("love-book-128.png", class:"book-logo"), words_path(@user) %></td>
-        <td class="text-left"><%= link_to "your original book!", words_path(@user), class: "h3"  %></td>
-      </tr>
-    </table>
+  <div class="user_info">
+    <div class=user_main_left>
+      <div class="user_box">
+        <div class="user_box-img">
+          <img src="<%= gravatar_url(@user, { size:100 }) %>" alt="" class="user-img">
+        </div>
+        <div class="user_box_name">
+          <p><%= @user.name %></p>
+        </div>
+      </div>
+      
+      <div class="user_email">
+        <h3>email:</h3>
+        <p><%= @user.email %></p>
+      </div>
+      <%= link_to image_tag("love-book-128.png", class:"book-logo"), words_path(@user) %>
+      <%= link_to "your original book!", words_path(@user), class: "mybook_link" %>
+    </div>
+
     <aside class="user_main_right">
       <% if current_user?(@user) %>
         <%= link_to "Edit", edit_user_path(@user.id), class: "btn btn-primary btn-lg mr-4" %>
@@ -21,9 +25,10 @@
       <% end %>
     </aside>
   </div>
-  
-  <h3 class="favorite-title">favorites</h3>
-  <div class="favorite_items">
-    <%= render "favorites/favorite_word", likes: @likes %>
-  </div>
+  <% if @likes.any? %>
+    <h3 class="favorite-title">favorites</h3>
+    <div class="favorite_items">
+      <%= render "favorites/favorite_word", likes: @likes %>
+    </div>
+  <% end %>
 </div>
