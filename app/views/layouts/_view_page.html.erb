@@ -1,4 +1,12 @@
 <div class="view-container">
+  <div class="input-serch">
+    <%= form_with(url: view_path, method: :get, local: true) do |f| %>
+      <div class="form-group">
+        <%= f.text_field :search, class: "search-form" %>
+        <%= f.submit "search", class: "search-btn" %> <%= link_to 'Clear', view_path %>
+      </div>
+    <% end %>
+  </div>
   <% @words.each do |word| %>
     <div class="view-box">
       <div class="view-box-top">

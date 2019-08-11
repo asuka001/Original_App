@@ -9,4 +9,9 @@ class Word < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :like_users, through: :favorites, source: :user
   
+  def self.search(search)
+    return Word.all unless search
+    Word.where(["word LIKE ?", "%#{search}%"])
+  end
+  
 end

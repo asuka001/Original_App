@@ -1,5 +1,5 @@
 class ViewsController < ApplicationController
   def index
-    @words = Word.all.page(params[:page]).per(10)
+    @words = Word.search(params[:search]).page(params[:page]).per(10)
   end
 end
